@@ -17,22 +17,9 @@ header {
     padding: 1rem;
 }
 
-/* Navigation styles */
-nav {
-    /* Add your navigation styling here */
-}
-
 /* Main content styles */
 main {
     padding: 2rem;
-}
-
-/* Section styles */
-section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
 }
 
 /* Footer styles */
@@ -41,6 +28,10 @@ footer {
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+#calendar-title-underline {
+    border-bottom: 3px solid rgb(59, 170, 204); /* Red: 59, Green: 170, Blue: 204 */
 }
 
 /* Media queries for responsive design */

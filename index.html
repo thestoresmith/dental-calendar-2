@@ -5,28 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
     <link rel="stylesheet" href="calendar-styles.css">
+    <script src="calendar-script.js"></script>
     <!-- Additional meta tags, stylesheets, or scripts can be included here -->
 </head>
 <body>
     <header>
-        <nav>
-            <!-- Navigation links or menu can go here -->
-        </nav>
     </header>
 
     <main>
-        <section id="page-title">
-            <h1>Welcome to Your Website</h1>
-            <!-- Content related to the page title goes here -->
-        </section>
+        <div id="calendar-header">
+            <h2>Turn Around Time Calendar</h2>
+            <div id="calendar-title-underline"></div>
+            <p>Our convenient turn around time calendar will show you exactly when your case will be returned to your practice.</p>
+        </div>
+        <div id="calendar-body">
+            <div id="calendar-input-container"></div>
+            <div id="calendar-grid-container">
+                <table id="calendar-grid">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Calendar days will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="calendar-legend-container"></div>
+        </div>
 
-        <section id="content">
-            <!-- Main content of your webpage goes here -->
-        </section>
     </main>
 
     <footer>
-        <!-- Footer content goes here -->
     </footer>
 
     <!-- Additional scripts can be included here -->
