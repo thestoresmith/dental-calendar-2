@@ -34,6 +34,16 @@ footer {
     border-bottom: 3px solid rgb(59, 170, 204); /* Red: 59, Green: 170, Blue: 204 */
 }
 
+#calendar-grid th {
+    background-color: #888; /* Grey background */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+    font-size: 14px; /* Adjust the font size as needed */
+    padding: 10px;
+    text-align: center;
+    border: none;
+}
+
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
     /* Add responsive styles here */
