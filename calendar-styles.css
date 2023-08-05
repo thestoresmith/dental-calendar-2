@@ -30,8 +30,10 @@ footer {
     text-align: center;
 }
 
+/* The above rules don't matter. Only need to be concerned with what is below this comment. */
+
 #calendar-title-underline {
-    border-bottom: 3px solid rgb(59, 170, 204); /* Red: 59, Green: 170, Blue: 204 */
+    border-bottom: 3px solid rgb(59, 170, 204); /* Colored to match company logo */
 }
 
 #calendar-grid {
@@ -39,13 +41,27 @@ footer {
 }
 
 #calendar-grid th {
-    background-color: #888; /* Grey background */
     color: white; /* White text color */
     font-weight: bold; /* Bold text */
     font-size: 14px; /* Adjust the font size as needed */
     padding: 10px;
     text-align: center;
     border: none;
+}
+
+#month-name-row {
+    background-color: rgb(34, 70, 96); /* Colored to match website header */
+}
+
+#day-name-row {
+    background-color: #888; /* Grey background */
+}
+
+#calendar-grid td {
+    padding: 0;
+    text-align: center; /* Center the dates */
+    border: none;
+    background-color: rgb(204, 204, 204); /* Light gray background */
 }
 
 /* Media queries for responsive design */
