@@ -1,0 +1,49 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+/* Navigation styles */
+nav {
+    /* Add your navigation styling here */
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    /* Add responsive styles here */
+}
