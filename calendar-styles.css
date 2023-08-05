@@ -141,6 +141,30 @@ footer {
     background-color: rgb(204, 204, 204); /* Light gray background */
 }
 
+/* Styling for the calendar legend */
+#calendar-legend-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%; /* Circular color sample */
+    border: 1px solid black; /* Add black border */
+}
+
+.legend-description {
+    font-size: 13px;
+}
+
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
     /* Add responsive styles here */
