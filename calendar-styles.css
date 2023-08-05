@@ -32,15 +32,23 @@ footer {
 
 /* The above rules don't matter. Only need to be concerned with what is below this comment. */
 
-#calendar-title-underline {
-    border-bottom: 3px solid rgb(59, 170, 204); /* Colored to match company logo */
+/* Color constants */
+:root { 
+    --shipping-day-color: rgb(214,216,164); 
+    --in-lab-day-color: rgb(173,209,253);
+    --delivery-day-color: rgb(196,254,188);
+    --holiday-day-color: rgb(249,209,128);
 }
 
-#calendar-grid {
+#calendar-title-underline {
+    border-bottom: 3px solid rgb(59, 170, 204); /* Colored to match DentalFex company logo */
+}
+
+#calendar-table {
     border-collapse: collapse; /* Set border-collapse to collapse */
 }
 
-#calendar-grid th {
+#calendar-table th {
     color: white; /* White text color */
     font-weight: bold; /* Bold text */
     font-size: 14px; /* Adjust the font size as needed */
@@ -50,14 +58,14 @@ footer {
 }
 
 #month-name-row {
-    background-color: rgb(34, 70, 96); /* Colored to match website header */
+    background-color: rgb(34, 70, 96); /* Colored to match DentalFex website header */
 }
 
 #day-name-row {
     background-color: #888; /* Grey background */
 }
 
-#calendar-grid td {
+#calendar-table td {
     padding: 0;
     text-align: center; /* Center the dates */
     border: none;
