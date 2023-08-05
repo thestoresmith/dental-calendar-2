@@ -36,10 +36,10 @@ for (let i = 0; i < augustDays.length; i++) {
             cell.style.backgroundColor = ''; // No color
         } else if (colorIndices[j] === 1) {
             cell.style.backgroundColor = 'var(--shipping-day-color)'; // Shipping day color
-        } else if (colorIndices[j] === 3) {
-            cell.style.backgroundColor = 'var(--in-lab-day-color)'; // In-lab day color
         } else if (colorIndices[j] === 2) {
             cell.style.backgroundColor = 'var(--holiday-day-color)'; // Holiday color
+        } else if (colorIndices[j] === 3) {
+            cell.style.backgroundColor = 'var(--in-lab-day-color)'; // In-lab day color
         } else if (colorIndices[j] === 4) {
             cell.style.backgroundColor = 'var(--delivery-day-color)'; // Delivery day color
         }

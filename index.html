@@ -15,10 +15,36 @@
         <div id="calendar-header">
             <h2>Turn-Around Time Calendar</h2>
             <div id="calendar-title-underline"></div>
-            <p>Our convenient turn-around time calendar will show you exactly when your case will be returned to your practice.</p>
+            <p id="calendar-description">Our convenient turn-around time calendar will show you exactly when your case will be returned to your practice.</p>
         </div>
         <div id="calendar-body">
-            <div id="calendar-input-container"></div>
+
+            <div id="calendar-input-container">
+                <form id="shipping-form">
+                    <label for="shipping-date">Select a Date the Case is Shipped or Picked Up:</label>
+                    <input type="date" id="shipping-date" name="shipping-date" placeholder="Click to Select">
+            
+                    <label for="product-type">Select a Product:</label>
+                    <select id="product-type" name="product-type">
+                        <option value="" disabled selected>Click to select...</option>
+                        <option value="acrylic-partials">• Acrylic Partials</option>
+                        <option value="bleach-trays">• Bleach Trays</option>
+                        <option value="custom-tray">• Custom Tray</option>
+                        <option value="denture-set-up">• Denture Set Up</option>
+                        <option value="metal-frame-partials">• Metal Frame Partials</option>
+                        <option value="night-guard-splints">• Night Guard/Splints</option>
+                        <option value="process-finish">• Process and Finish</option>
+                        <option value="repairs">• Repairs (Same Day)</option>
+                        <option value="second-day-conversion">• Second Day Conversion</option>
+                        <option value="second-day-trefoil">• Second Day Trefoil</option>
+                        <option value="wax-rims">• Wax Rims</option>
+                        <!-- Add more product options -->
+                    </select>
+            
+                    <button id="submit-button" type="submit">Submit</button>
+                </form>
+            </div>
+
             <div id="calendar-table-container">
                 <table id="calendar-table">
                     <thead>
@@ -39,6 +65,7 @@
                     </tbody>
                 </table>
             </div>
+
             <div id="calendar-legend-container"></div>
         </div>
     </main>
