@@ -34,6 +34,10 @@ footer {
     border-bottom: 3px solid rgb(59, 170, 204); /* Red: 59, Green: 170, Blue: 204 */
 }
 
+#calendar-grid {
+    border-collapse: collapse; /* Set border-collapse to collapse */
+}
+
 #calendar-grid th {
     background-color: #888; /* Grey background */
     color: white; /* White text color */
