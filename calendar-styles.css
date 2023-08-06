@@ -101,7 +101,7 @@ footer {
     transition: border-color 0.3s, box-shadow 0.3s; /* Add transition for visual effects */
 }
 
-/* Add a slight shadow on hover and focus */
+/* Add a slight shadow on focus */
 #shipping-form select:focus,
 #shipping-form input[type="date"]:focus {
     border-color: rgb(59, 170, 204); /* Change border color on focus */
@@ -111,6 +111,12 @@ footer {
 #product-type option[disabled] {
     color: #888; /* Grayed out color */
     font-style: italic;
+}
+
+/* Add styles to change cursor to pointer on hover for input fields */
+#shipping-form input[type="date"]:hover,
+#product-type:hover {
+    cursor: pointer;
 }
 
 /* Styling for the Submit Button */
@@ -126,16 +132,16 @@ footer {
     transition: background-color 0.3s, transform 0.3s; /* Add transitions for smoother effects */
 }
 
-/* Change button color on hover */
-#shipping-form button:hover {
-    background-color: rgb(34, 70, 96); /* Darker color on hover */
-}
-
 /* Add styles for invalid form fields */
 #shipping-date.invalid,
 #product-type.invalid {
     border-color: red;
     box-shadow: 0 0 4px rgba(255, 0, 0, 0.4);
+}
+
+/* Change button color on hover */
+#shipping-form button:hover {
+    background-color: rgb(34, 70, 96); /* Darker color on hover */
 }
 
 #calendar-table-container {
