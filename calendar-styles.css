@@ -161,8 +161,16 @@ footer {
     border: 1px solid black; /* Add black border */
 }
 
-.legend-description {
-    font-size: 13px;
+/* Add more bottom margin to the last legend-item */
+.legend-item:last-child {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+/* Styling for the legend notes */
+.legend-note {
+    font-size: 12px;
+    margin-top: 5px; /* Add spacing between notes and legend items */
+    text-align: left;
 }
 
 /* Media queries for responsive design */
