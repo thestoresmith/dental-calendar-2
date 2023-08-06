@@ -19,7 +19,7 @@ header {
 
 /* Main content styles */
 main {
-    padding: 2rem;
+    padding: 0;
 }
 
 /* Footer styles */
@@ -40,6 +40,11 @@ footer {
     --holiday-day-color: rgb(249,209,128);
 }
 
+#calendar-header {
+    padding: 20px 20px 0 20px;
+    margin: 0 auto;
+    max-width: 1040px
+}
 
 #calendar-title-underline {
     border-bottom: 4px solid rgb(59, 170, 204); /* Colored to match DentalFex company logo */
@@ -49,6 +54,10 @@ footer {
     margin-bottom: 20px;
 }
 
+#calendar-body-container {
+    padding: 0;
+}
+
 /* Styling for the calendar body */
 #calendar-body {
     display: flex;
@@ -56,8 +65,8 @@ footer {
     justify-content: space-between;
     background-color: rgb(235, 235, 235);
     border-radius: 10px;
-    padding: 20px 0px;
-    max-width: 1100px; /* Set a maximum width */
+    padding: 20px;
+    max-width: 1000px; /* Set a maximum width */
     margin: 0 auto; /* Center the div horizontally */
 }
 
@@ -200,10 +209,10 @@ footer {
 }
 
 /* Media queries for responsive design */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 450px) {
     /* Add responsive styles here */
-    #calendar-body {
-        padding: 20px;
+    #calendar-body-container {
+        padding: 0 20px;
     }
     
-}
+}6
