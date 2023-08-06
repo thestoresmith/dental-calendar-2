@@ -62,6 +62,9 @@ inLabDaysPlaceholder.textContent = inLabDays.toString();
 
 // End of setting up the page with sample data
 
+const shippingForm = document.getElementById('shipping-form');
+const shippingDateInput = document.getElementById('shipping-date');
+const productTypeSelect = document.getElementById('product-type');
 shippingForm.addEventListener('submit', function (event) {
     if (!shippingDateInput.value || productTypeSelect.value === '') {
         event.preventDefault(); // Prevent form submission if validation fails
