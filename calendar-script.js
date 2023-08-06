@@ -53,7 +53,7 @@ for (let i = 0; i < augustDays.length; i++) {
 const monthNameElement = document.querySelector('#month-name-row th');
 
 // Update the month name
-monthNameElement.textContent = 'August';
+monthNameElement.textContent = 'September';
 
 // Assume you want to change the color of the date "31" (for example)
 const specificDate = document.querySelector('#calendar-table td:contains("31")');
