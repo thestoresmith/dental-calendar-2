@@ -1,3 +1,4 @@
+// Set up the page with sample data
 // Sample data for the days of the month
 const augustDays = [
     [20, 21, 22, 23, 24, 25, 26],
@@ -55,13 +56,25 @@ const monthNameElement = document.querySelector('#month-name-row th');
 // Update the month name
 monthNameElement.textContent = 'September';
 
-// Assume you want to change the color of the date "31" (for example)
-const specificDate = document.querySelector('#calendar-table td:contains("31")');
+const inLabDaysPlaceholder = document.getElementById('in-lab-days-placeholder');
+const inLabDays = 10; // The number of In-Lab Days (modify as needed)
+inLabDaysPlaceholder.textContent = inLabDays.toString();
 
-// Get the value of the custom property for shipping day color
-const shippingDayColor = getComputedStyle(document.documentElement).getPropertyValue('--shipping-day-color');
+// End of setting up the page with sample data
 
-// Update the color of the specific date
-if (specificDate) {
-    specificDate.style.backgroundColor = shippingDayColor;
-}
+shippingForm.addEventListener('submit', function (event) {
+    if (!shippingDateInput.value || productTypeSelect.value === '') {
+        event.preventDefault(); // Prevent form submission if validation fails
+
+        // Display an error message to the user (you can modify this part)
+        alert('Please select a date and a product.');
+
+        // Highlight the invalid fields
+        if (!shippingDateInput.value) {
+            shippingDateInput.classList.add('invalid');
+        }
+        if (productTypeSelect.value === '') {
+            productTypeSelect.classList.add('invalid');
+        }
+    }
+});

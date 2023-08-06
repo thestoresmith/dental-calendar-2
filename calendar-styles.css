@@ -131,6 +131,13 @@ footer {
     background-color: rgb(34, 70, 96); /* Darker color on hover */
 }
 
+/* Add styles for invalid form fields */
+#shipping-date.invalid,
+#product-type.invalid {
+    border-color: red;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.4);
+}
+
 #calendar-table-container {
     flex: 1;
     margin-right: 20px; /* Add some spacing between sections */
@@ -214,5 +221,4 @@ footer {
     #calendar-body-container {
         padding: 0 20px;
     }
-    
-}6
+}

@@ -19,88 +19,87 @@
         </div>
         <div id="calendar-body-container">
             <div id="calendar-body">
-
-                <div id="calendar-input-container">
-                    <form id="shipping-form">
-                        <label for="shipping-date">Select a Date the Case is Shipped or Picked Up:</label>
-                        <input type="date" id="shipping-date" name="shipping-date" placeholder="Click to Select">
-                
-                        <label for="product-type">Select a Product:</label>
-                        <select id="product-type" name="product-type">
-                            <option value="" disabled selected>Click to select...</option>
-                            <option value="acrylic-partials">• Acrylic Partials</option>
-                            <option value="bleach-trays">• Bleach Trays</option>
-                            <option value="custom-tray">• Custom Tray</option>
-                            <option value="denture-set-up">• Denture Set Up</option>
-                            <option value="metal-frame-partials">• Metal Frame Partials</option>
-                            <option value="night-guard-splints">• Night Guard/Splints</option>
-                            <option value="process-finish">• Process and Finish</option>
-                            <option value="repairs">• Repairs (Same Day)</option>
-                            <option value="second-day-conversion">• Second Day Conversion</option>
-                            <option value="second-day-trefoil">• Second Day Trefoil</option>
-                            <option value="wax-rims">• Wax Rims</option>
-                            <!-- Add more product options -->
-                        </select>
-                
-                        <button id="submit-button" type="submit">Submit</button>
-                    </form>
-                </div>
-
-                <div id="calendar-table-container">
-                    <table id="calendar-table">
-                        <thead>
-                            <tr id="month-name-row">
-                                <th colspan="7"><!-- Replace with JavaScript-generated month name --></th>
-                            <tr id="day-name-row">
-                                <th>Sun</th>
-                                <th>Mon</th>
-                                <th>Tue</th>
-                                <th>Wed</th>
-                                <th>Thu</th>
-                                <th>Fri</th>
-                                <th>Sat</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Calendar days will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <div id="calendar-legend-container">
-                    <div id="legend-items">
-                        <div class="legend-item">
-                            <div class="legend-color" style="background-color: var(--shipping-day-color);"></div>
-                            <div class="legend-description">Shipping Days</div>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color" style="background-color: var(--in-lab-day-color);"></div>
-                            <div class="legend-description">In-Lab Days: 10</div>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color" style="background-color: var(--delivery-day-color);"></div>
-                            <div class="legend-description">Delivery Day</div>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color" style="background-color: var(--holiday-day-color);"></div>
-                            <div class="legend-description">Holidays</div>
-                        </div>
+                    <div id="calendar-input-container">
+                        <form id="shipping-form">
+                            <label for="shipping-date">Select a Date the Case is Shipped or Picked Up:</label>
+                            <input type="date" id="shipping-date" name="shipping-date" placeholder="Click to Select">
+                    
+                            <label for="product-type">Select a Product:</label>
+                            <select id="product-type" name="product-type">
+                                <option value="" disabled selected>Click to select...</option>
+                                <option value="acrylic-partials">• Acrylic Partials</option>
+                                <option value="bleach-trays">• Bleach Trays</option>
+                                <option value="custom-tray">• Custom Tray</option>
+                                <option value="denture-set-up">• Denture Set Up</option>
+                                <option value="metal-frame-partials">• Metal Frame Partials</option>
+                                <option value="night-guard-splints">• Night Guard/Splints</option>
+                                <option value="process-finish">• Process and Finish</option>
+                                <option value="repairs">• Repairs (Same Day)</option>
+                                <option value="second-day-conversion">• Second Day Conversion</option>
+                                <option value="second-day-trefoil">• Second Day Trefoil</option>
+                                <option value="wax-rims">• Wax Rims</option>
+                                <!-- Add more product options -->
+                            </select>
+                    
+                            <button id="submit-button" type="submit">Submit</button>
+                        </form>
                     </div>
-                    <div id="legend-notes">
-                        <div class="legend-note">
-                            Note:
+
+                    <div id="calendar-table-container">
+                        <table id="calendar-table">
+                            <thead>
+                                <tr id="month-name-row">
+                                    <th colspan="7"><!-- Replace with JavaScript-generated month name --></th>
+                                <tr id="day-name-row">
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Calendar days will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="calendar-legend-container">
+                        <div id="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--shipping-day-color);"></div>
+                                <div class="legend-description">Shipping Days</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--in-lab-day-color);"></div>
+                                <div class="legend-description">In-Lab Days: <span id="in-lab-days-placeholder"></span></div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--delivery-day-color);"></div>
+                                <div class="legend-description">Delivery Day</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--holiday-day-color);"></div>
+                                <div class="legend-description">Holidays</div>
+                            </div>
                         </div>
-                        <div class="legend-note">
-                            Digital cases have a quicker turnaround time as they do not require physical pick-up.
-                            the STL files are emailed instead.
-                        </div>
-                        <div class="legend-note">
-                            Courier times could be less than 2 days, depending on the doctor's location.
+                        <div id="legend-notes">
+                            <div class="legend-note">
+                                Note:
+                            </div>
+                            <div class="legend-note">
+                                Digital cases have a quicker turnaround time as they do not require physical pick-up.
+                                the STL files are emailed instead.
+                            </div>
+                            <div class="legend-note">
+                                Courier times could be less than 2 days, depending on the doctor's location.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer>
