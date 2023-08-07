@@ -1,6 +1,6 @@
 // Set up the page with sample data
 // Sample data for the days of the month
-const augustDays = [
+const sampleDays = [
     [20, 21, 22, 23, 24, 25, 26],
     [27, 28, 29, 30, 31, 1, 2],
     [3, 4, 5, 6, 7, 8, 9],
@@ -22,8 +22,8 @@ const dayColors = [
 const calendarBody = document.querySelector('#calendar-table tbody');
 
 // Populate the calendar table with days and apply colors
-for (let i = 0; i < augustDays.length; i++) {
-    const week = augustDays[i];
+for (let i = 0; i < sampleDays.length; i++) {
+    const week = sampleDays[i];
     const colorIndices = dayColors.slice(i * 7, (i + 1) * 7); // Get color indices for the week
 
     const row = document.createElement('tr');
@@ -34,7 +34,7 @@ for (let i = 0; i < augustDays.length; i++) {
 
         // Apply background color based on color index using CSS variables
         if (colorIndices[j] === 0) {
-            cell.style.backgroundColor = ''; // No color
+            cell.style.backgroundColor = ''; // No special color
         } else if (colorIndices[j] === 1) {
             cell.style.backgroundColor = 'var(--shipping-day-color)'; // Shipping day color
         } else if (colorIndices[j] === 2) {
@@ -54,7 +54,7 @@ for (let i = 0; i < augustDays.length; i++) {
 const monthNameElement = document.querySelector('#month-name-row th');
 
 // Update the month name
-monthNameElement.textContent = 'September';
+monthNameElement.textContent = 'Example';
 
 const inLabDaysPlaceholder = document.getElementById('in-lab-days-placeholder');
 const inLabDays = 10; // The number of In-Lab Days (modify as needed)
@@ -79,5 +79,20 @@ shippingForm.addEventListener('submit', function (event) {
         if (productTypeSelect.value === '') {
             productTypeSelect.classList.add('invalid');
         }
+    } else {
+        // Clear existing calendar days
+        const rowsToRemove = document.querySelectorAll('#calendar-table tbody tr:not(#day-name-row)');
+        rowsToRemove.forEach(row => {
+            calendarBody.removeChild(row);
+        });
+
+        // Get the selected shipping date
+        const selectedDate = new Date(shippingDateInput.value);
+
+        // Update the month name based on the selected date
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        monthNameElement.textContent = monthNames[selectedDate.getMonth()];
+
+        // ... (populate the calendar with appropriate days)
     }
 });
