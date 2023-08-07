@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {  
             // Update the month name based on the selected date
             const monthNameElement = document.querySelector('#month-name-row th');
-                        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const selectedDate = new Date(shippingDateInput.value);
+            console.log("Date:");
+            console.log(selectedDate);
             monthNameElement.textContent = monthNames[selectedDate.getMonth()];
 
             // Determine the calendar start date
@@ -32,8 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
             let calendarIndexDate = new Date();
             calendarIndexDate.setTime(selectedDate.getTime() - (7 + dayOfWeek)*1000*60*60*24);
             
+            let calendarBody = document.querySelector('#calendar-table tbody');
+            // Remove all existing date cells (td elements) within the tbody
+            const dateCells = calendarBody.querySelectorAll('td');
+            dateCells.forEach(cell => {
+                cell.remove();
+            });
+
             // populate the calendar
-            const calendarBody = document.querySelector('#calendar-table tbody');
             for (let i = 0; i < 6; i++) {
                 const row = document.createElement('tr');
                 for (let j = 0; j < 7; j++) {
@@ -42,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     row.appendChild(cell);
                     // increment the calendarIndexDate var
                     calendarIndexDate.setTime(calendarIndexDate.getTime() + 1000*60*60*24);
+                    console.log("hi");
                 }
                 calendarBody.appendChild(row);
             }
