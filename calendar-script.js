@@ -22,5 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 productTypeSelect.classList.add('invalid');
             }
         } else {  
+        }
+        calendarTableContainer.style.display = "block";
+        calendarLegendContainer.style.display = "flex";
     });
 });
