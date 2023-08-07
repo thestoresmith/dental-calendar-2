@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const monthNameElement = document.querySelector('#month-name-row th');
             const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
             const selectedDate = new Date(shippingDateInput.value);
-            const selectedCalendarDate = selectedDate.getUTCDate();
             monthNameElement.textContent = monthNames[selectedDate.getUTCMonth()];
 
             // determine number of days in lab based on product
@@ -50,12 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
             // populate the calendar
             let colorState = 'init';
             let shipDays;
-            let deliveryDate;
             for (let i = 0; i < 6; i++) {
                 const row = document.createElement('tr');
                 for (let j = 0; j < 7; j++) {
                     const cell = document.createElement('td');
                     cell.textContent = calendarIndexDate.getUTCDate();
+
                     // determine background color
                     if ((colorState == 'init') && (calendarIndexDate.getUTCDate() == selectedDate.getUTCDate())) {
                         // index has reached the initial ship date
@@ -65,7 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     const localDayOfWeek = calendarIndexDate.getUTCDay();
                     const isHoliday = getIsHoliday(calendarIndexDate);
                     if (isHoliday) {
-                        cell.style.backgroundColor = 'var(--holiday-day-color)';
+                        if ((colorState === 'init')||(colorState === 'done')) {
+                            // no coloring for these states
+                        } else {
+                            cell.style.backgroundColor = 'var(--holiday-day-color)';
+                        }
                     } else if (!localDayOfWeek) {
                         // Sunday - no color
                     } else {                
@@ -107,13 +110,14 @@ document.addEventListener("DOMContentLoaded", function () {
                             default:
                         }
                     }
+
                     row.appendChild(cell);
                     // increment the calendarIndexDate var
                     calendarIndexDate.setTime(calendarIndexDate.getTime() + 1000*60*60*24);
                 }
                 calendarBody.appendChild(row);
             }
-           
+
             // make the calendar and legend visible
             calendarTableContainer.style.display = "block";
             calendarLegendContainer.style.display = "flex";
