@@ -8,4 +8,4 @@ shippingForm.addEventListener('submit', function (event) {
     calendarContainer.style.display = 'block';
     legendContainer.style.display = 'flex';
 
-}
+})
