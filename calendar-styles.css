@@ -148,7 +148,7 @@ footer {
 }
 
 #calendar-table-container {
-    display: none;
+    display: block;
     flex: 1;
     margin-right: 20px; /* Add some spacing between sections */
 }
@@ -185,7 +185,7 @@ footer {
 /* Styling for the calendar legend */
 #calendar-legend-container {
     flex: 1;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     margin-top: 13px;
     max-width: 750px;
