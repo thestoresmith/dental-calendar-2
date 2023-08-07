@@ -98,9 +98,12 @@ footer {
     padding: 10px; /* Slightly increase padding for a softer look */
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 150px;
+    width: 178px;
     font-size: 13px; /* Adjust font size for consistency */
     transition: border-color 0.3s, box-shadow 0.3s; /* Add transition for visual effects */
+}
+#shipping-form select {
+    width: 200px;
 }
 
 /* Add a slight shadow on focus */

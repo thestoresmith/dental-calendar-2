@@ -22,7 +22,7 @@
                     <div id="calendar-input-container">
                         <form id="shipping-form">
                             <label for="shipping-date">Select a Date the Case is Shipped or Picked Up:</label>
-                            <input type="date" id="shipping-date">
+                            <input type="date" id="shipping-date" name="shipping-date">
                     
                             <label for="product-type">Select a Product:</label>
                             <select id="product-type" name="product-type">
@@ -40,7 +40,6 @@
                                 <option value="second-day-conversion">• Second Day Conversion</option>
                                 <option value="second-day-trefoil">• Second Day Trefoil</option>
                                 <option value="wax-rims">• Wax Rims</option>
-                                <!-- Add more product options -->
                             </select>
                     
                             <button id="submit-button" type="submit">Submit</button>
@@ -76,7 +75,7 @@
                             </div>
                             <div class="legend-item">
                                 <div class="legend-color" style="background-color: var(--in-lab-day-color);"></div>
-                                <div class="legend-description">In-Lab Days: <span id="in-lab-days-placeholder"></span></div>
+                                <div class="legend-description">In-Lab Days: <span id="in-lab-days"></span></div>
                             </div>
                             <div class="legend-item">
                                 <div class="legend-color" style="background-color: var(--delivery-day-color);"></div>
