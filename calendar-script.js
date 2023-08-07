@@ -1,5 +1,4 @@
 // Declare and initialize the flag outside the DOMContentLoaded event
-let calendarPopulated = false; // Flag to track calendar population
 
 document.addEventListener('DOMContentLoaded', function () {
     // Set up the page with sample data
@@ -22,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
         0,0,0,0,0,0,0,
     ]
 
-    // Get the calendar table body
-    const calendarBody = document.querySelector('#calendar-table tbody');
+    const calendarContainer = document.getElementById('calendar-body-container');
+    let calendarPopulated = calendarContainer.getAttribute('data-calendar-populated') === 'true';
+        if (!calendarPopulated) {
+        // Get the calendar table body
+        const calendarBody = document.querySelector('#calendar-table tbody');
 
-    if (!calendarPopulated) {
         // Populate the calendar table with days and apply colors
         for (let i = 0; i < sampleDays.length; i++) {
             const week = sampleDays[i];
@@ -63,8 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const inLabDaysPlaceholder = document.getElementById('in-lab-days-placeholder');
         const inLabDays = 10; // The number of In-Lab Days (modify as needed)
         inLabDaysPlaceholder.textContent = inLabDays.toString();
+
+        calendarContainer.setAttribute('data-calendar-populated', 'true');
     }
-    // End of setting up the page with sample data
+
+
 
     const shippingForm = document.getElementById('shipping-form');
     const shippingDateInput = document.getElementById('shipping-date');
