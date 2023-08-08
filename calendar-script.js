@@ -79,7 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                     cell.style.backgroundColor = 'var(--shipping-day-color)';
                                     shipDays--;
                                     if (shipDays == 0) {
-                                        colorState = 'lab';
+                                        if (labDays != 0) {
+                                            colorState = 'lab';
+                                        } else {
+                                            colorState = 'ship two';
+                                            shipDays = 2;
+                                        }
                                     }
                                 break;
                             case 'lab':
