@@ -109,6 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
                             case 'delivery':
                                 cell.style.backgroundColor = 'var(--delivery-day-color)';
                                 colorState = 'done';
+                                let startMonth = selectedDate.getUTCMonth();
+                                let endMonth = calendarIndexDate.getUTCMonth();
+                                if (startMonth === endMonth){
+                                    // same month, don't update the calendar
+                                } else {
+                                    // diferent months, update the month displayed on the calendar
+                                    monthNameElement.textContent = monthNames[startMonth] + ' / ' + monthNames[endMonth];
+                                }
                                 break;
                             case 'done':
                                 break;
