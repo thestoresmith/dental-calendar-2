@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     cell.textContent = calendarIndexDate.getUTCDate();
 
                     // determine background color
-                    if ((colorState == 'init') && (calendarIndexDate.getUTCDate() == selectedDate.getUTCDate())) {
+                    if ((colorState === 'init') && (calendarIndexDate.getUTCDate() == selectedDate.getUTCDate())) {
                         // index has reached the initial ship date
                         colorState = 'ship one';
                         shipDays = 2;
